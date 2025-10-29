@@ -130,8 +130,8 @@ export default function PrivacyPolicy() {
             <div className="rounded-sm border border-stone-200 bg-stone-50 p-6">
               <p className="font-medium text-stone-900">comnect UG (haftungsbeschränkt)</p>
               <p className="mt-1">Max Baumgarten</p>
-              <p className="mt-1">Torstraße 177</p>
-              <p className="mt-1">10115 Berlin</p>
+              <p className="mt-1">Immanuelkirch Str. 14a</p>
+              <p className="mt-1">10405 Berlin</p>
               <p className="mt-1">Deutschland</p>
               <p className="mt-3">
                 E-Mail: <a href="mailto:hello@speedcalculator.com" className="text-stone-900 underline">hello@speedcalculator.com</a>

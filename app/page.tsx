@@ -39,15 +39,15 @@ const upcomingTools = [
 ];
 
 const speedExamples = [
-  { name: 'Human walking speed', value: '5 km/h (3.1 mph)' },
-  { name: 'Usain Bolt (world record)', value: '44.72 km/h (27.8 mph)' },
-  { name: 'Cheetah (top speed)', value: '120 km/h (75 mph)' },
-  { name: 'Highway speed limit (US)', value: '105-120 km/h (65-75 mph)' },
-  { name: 'High-speed train', value: '300 km/h (186 mph)' },
-  { name: 'Commercial aircraft', value: '900 km/h (560 mph)' },
-  { name: 'Sound (at sea level)', value: '1,235 km/h (767 mph)' },
-  { name: 'Earth\'s orbit around sun', value: '107,000 km/h (66,600 mph)' },
-  { name: 'Speed of light', value: '1,079,252,848 km/h (670,616,629 mph)' },
+  { name: 'Human walking speed', value: '3.1 mph (5 km/h)' },
+  { name: 'Usain Bolt (world record)', value: '27.8 mph (44.72 km/h)' },
+  { name: 'Cheetah (top speed)', value: '75 mph (120 km/h)' },
+  { name: 'Highway speed limit (US)', value: '65-75 mph (105-120 km/h)' },
+  { name: 'High-speed train', value: '186 mph (300 km/h)' },
+  { name: 'Commercial aircraft', value: '560 mph (900 km/h)' },
+  { name: 'Sound (at sea level)', value: '767 mph (1,235 km/h)' },
+  { name: 'Earth\'s orbit around sun', value: '66,600 mph (107,000 km/h)' },
+  { name: 'Speed of light', value: '670,616,629 mph (1,079,252,848 km/h)' },
 ];
 
 export default function Home() {
@@ -55,9 +55,9 @@ export default function Home() {
   const [distance, setDistance] = useState('');
   const [time, setTime] = useState('');
   const [speed, setSpeed] = useState('');
-  const [distanceUnit, setDistanceUnit] = useState<string>('km');
+  const [distanceUnit, setDistanceUnit] = useState<string>('mi');
   const [timeUnit, setTimeUnit] = useState<'s' | 'min' | 'h'>('min');
-  const [speedUnit, setSpeedUnit] = useState<string>('kmh');
+  const [speedUnit, setSpeedUnit] = useState<string>('mph');
 
   const [result, setResult] = useState<{
     value: number;
@@ -66,23 +66,23 @@ export default function Home() {
   } | null>(null);
 
   const distanceUnits = [
-    { value: 'mm', label: 'millimeters', toMeters: 0.001 },
-    { value: 'cm', label: 'centimeters', toMeters: 0.01 },
-    { value: 'm', label: 'meters', toMeters: 1 },
-    { value: 'km', label: 'kilometers', toMeters: 1000 },
-    { value: 'in', label: 'inches', toMeters: 0.0254 },
+    { value: 'mi', label: 'miles', toMeters: 1609.34 },
     { value: 'ft', label: 'feet', toMeters: 0.3048 },
     { value: 'yd', label: 'yards', toMeters: 0.9144 },
-    { value: 'mi', label: 'miles', toMeters: 1609.34 },
+    { value: 'in', label: 'inches', toMeters: 0.0254 },
+    { value: 'km', label: 'kilometers', toMeters: 1000 },
+    { value: 'm', label: 'meters', toMeters: 1 },
+    { value: 'cm', label: 'centimeters', toMeters: 0.01 },
+    { value: 'mm', label: 'millimeters', toMeters: 0.001 },
     { value: 'nmi', label: 'nautical miles', toMeters: 1852 },
   ];
 
   const speedUnits = [
-    { value: 'ms', label: 'm/s', toMps: 1 },
-    { value: 'kmh', label: 'km/h', toMps: 1/3.6 },
     { value: 'mph', label: 'mph', toMps: 0.44704 },
-    { value: 'knots', label: 'knots', toMps: 0.514444 },
     { value: 'fps', label: 'ft/s', toMps: 0.3048 },
+    { value: 'kmh', label: 'km/h', toMps: 1/3.6 },
+    { value: 'ms', label: 'm/s', toMps: 1 },
+    { value: 'knots', label: 'knots', toMps: 0.514444 },
     { value: 'kmm', label: 'km/min', toMps: 1000/60 },
   ];
 
@@ -513,7 +513,7 @@ export default function Home() {
               <h3 className="mb-2 font-medium text-stone-900">What is the formula for speed?</h3>
               <p className="text-sm font-light leading-relaxed text-stone-600">
                 The speed formula is: <strong className="font-medium">Speed = Distance / Time</strong> (or v = d / t).
-                For example, if you travel 100 kilometers in 2 hours, your speed is 100 / 2 = 50 km/h.
+                For example, if you travel 60 miles in 1 hour, your speed is 60 / 1 = 60 mph.
               </p>
             </div>
             <div className="border-l border-stone-300 bg-white px-6 py-5">
@@ -556,7 +556,7 @@ export default function Home() {
                   Average speed is calculated by dividing the total distance traveled by the total time taken. Unlike velocity, speed does not account for direction.
                 </p>
                 <p className="italic">
-                  Example: A car travels 150 km in 2 hours. Its average speed is 150 / 2 = 75 km/h.
+                  Example: A car travels 120 miles in 2 hours. Its average speed is 120 / 2 = 60 mph.
                 </p>
               </div>
             </div>
@@ -565,22 +565,22 @@ export default function Home() {
                 Common Speed Units
               </h2>
               <div className="space-y-3">
-                <div className="border-l border-stone-300 pl-4">
-                  <div className="text-sm font-medium text-stone-900">Meters per second (m/s)</div>
+                <div className="border-l-2 border-stone-900 pl-4">
+                  <div className="text-sm font-medium text-stone-900">Miles per hour (mph)</div>
                   <div className="mt-1 text-sm font-light text-stone-500">
-                    SI unit of speed, commonly used in physics
+                    Standard speed unit in the United States for road traffic and daily use
+                  </div>
+                </div>
+                <div className="border-l border-stone-300 pl-4">
+                  <div className="text-sm font-medium text-stone-900">Feet per second (ft/s)</div>
+                  <div className="mt-1 text-sm font-light text-stone-500">
+                    Common in US engineering and physics applications
                   </div>
                 </div>
                 <div className="border-l border-stone-300 pl-4">
                   <div className="text-sm font-medium text-stone-900">Kilometers per hour (km/h)</div>
                   <div className="mt-1 text-sm font-light text-stone-500">
-                    Widely used for road traffic and general purposes
-                  </div>
-                </div>
-                <div className="border-l border-stone-300 pl-4">
-                  <div className="text-sm font-medium text-stone-900">Miles per hour (mph)</div>
-                  <div className="mt-1 text-sm font-light text-stone-500">
-                    Used primarily in the United States and United Kingdom
+                    International standard for road traffic outside the US
                   </div>
                 </div>
               </div>

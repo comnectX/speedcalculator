@@ -12,8 +12,8 @@ export const metadata: Metadata = {
     default: 'Speed Calculator - Calculate Speed, Distance & Time | Free Online Tool',
     template: '%s | SpeedCalculator.com'
   },
-  description: 'Free online speed calculator. Calculate speed from distance and time, find distance, or calculate time. Supports mph, km/h, m/s, knots and 9 distance units. Includes speed conversion tables and formulas.',
-  keywords: ['speed calculator', 'speed formula', 'distance calculator', 'time calculator', 'velocity calculator', 'mph calculator', 'km/h calculator', 'speed distance time calculator', 'calculate speed', 'speed conversion', 'pace calculator', 'running pace'],
+  description: 'Free online speed calculator for mph, km/h, and more. Calculate speed from distance and time, find distance, or calculate time. Supports miles, feet, meters and 9 distance units. Perfect for US drivers and students.',
+  keywords: ['speed calculator', 'mph calculator', 'miles per hour calculator', 'speed formula', 'distance calculator', 'time calculator', 'velocity calculator', 'speed distance time calculator', 'calculate speed mph', 'speed conversion', 'miles to kilometers', 'feet per second calculator'],
   authors: [{ name: 'SpeedCalculator.com' }],
   creator: 'SpeedCalculator.com',
   publisher: 'SpeedCalculator.com',
@@ -29,8 +29,8 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     url: 'https://speedcalculator.com',
-    title: 'Speed Calculator - Calculate Speed, Distance & Time',
-    description: 'Free online speed calculator with support for mph, km/h, m/s, knots and more. Calculate speed, distance, or time with instant results.',
+    title: 'Speed Calculator - MPH, Miles & Feet Calculator',
+    description: 'Free speed calculator for mph and miles. Calculate speed, distance, or time instantly. Perfect for US drivers, students, and anyone needing quick speed calculations.',
     siteName: 'SpeedCalculator.com',
     images: [
       {
@@ -43,8 +43,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Speed Calculator - Calculate Speed, Distance & Time',
-    description: 'Free online speed calculator with support for mph, km/h, m/s, knots and more.',
+    title: 'Speed Calculator - MPH & Miles Calculator',
+    description: 'Free speed calculator for mph and miles. Calculate speed, distance, or time instantly.',
     images: ['/og-image.png'],
   },
   robots: {
@@ -95,7 +95,7 @@ export default function RootLayout({
   };
 
   return (
-    <html lang="en">
+    <html lang="en-US">
       <head>
         <link rel="manifest" href="/manifest.json" />
         <link rel="icon" href="/favicon.ico" sizes="any" />

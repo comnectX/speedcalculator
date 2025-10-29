@@ -32,8 +32,8 @@ export default function Imprint() {
             <h2 className="mb-4 text-2xl font-light text-stone-900">Company Information</h2>
             <div className="rounded-sm border border-stone-200 bg-stone-50 p-6">
               <p className="mb-2 text-base font-medium text-stone-900">comnect UG (haftungsbeschränkt)</p>
-              <p>Torstraße 177</p>
-              <p>10115 Berlin</p>
+              <p>Immanuelkirch Str. 14a</p>
+              <p>10405 Berlin</p>
               <p className="mt-3">Deutschland</p>
             </div>
           </section>
@@ -46,7 +46,7 @@ export default function Imprint() {
                 <span className="font-medium text-stone-900">Registered at:</span> Amtsgericht Berlin Charlottenburg
               </p>
               <p>
-                <span className="font-medium text-stone-900">Registration number:</span> HRB 246940 B
+                <span className="font-medium text-stone-900">Registration number:</span> HRB 231194 B
               </p>
               <p>
                 <span className="font-medium text-stone-900">VAT ID:</span> DE358558502
@@ -160,8 +160,8 @@ export default function Imprint() {
             </h2>
             <div className="rounded-sm border border-stone-200 bg-stone-50 p-6">
               <p className="font-medium text-stone-900">Max Baumgarten</p>
-              <p className="mt-2">Torstraße 177</p>
-              <p>10115 Berlin</p>
+              <p className="mt-2">Immanuelkirch Str. 14a</p>
+              <p>10405 Berlin</p>
               <p className="mt-3">Deutschland</p>
             </div>
           </section>
